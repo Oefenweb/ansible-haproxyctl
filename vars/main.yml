@@ -1,0 +1,8 @@
+# vars file for haproxyctl
+---
+haproxyctl_dependencies:
+  - git-core
+  - ruby
+  - lsof
+
+haproxyctl_checkout_path: /var/lib/ansible/haproxyctl/checkouts/haproxyctl

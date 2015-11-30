@@ -1,0 +1,47 @@
+# tasks file for haproxyctl
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: true
+    cache_valid_time: 3600
+  with_items: haproxyctl_dependencies
+  tags:
+    - configuration
+    - haproxyctl
+    - haproxyctl-install
+    - haproxyctl-install-dependencies
+
+- name: create (checkout) directory
+  file:
+    path: /var/lib/ansible/haproxyctl/checkouts
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - configuration
+    - haproxyctl
+    - haproxyctl-checkout
+
+- name: checkout repository
+  git:
+    repo: https://github.com/flores/haproxyctl.git
+    dest: "{{ haproxyctl_checkout_path }}"
+  register: result
+  tags:
+    - configuration
+    - haproxyctl
+    - haproxyctl-checkout
+
+- name: install
+  file:
+    src: "{{ haproxyctl_checkout_path }}/haproxyctl"
+    dest: "{{ haproxyctl_install_path }}/haproxyctl"
+    state: link
+    force: true
+  tags:
+    - configuration
+    - haproxyctl
+    - haproxyctl-install
