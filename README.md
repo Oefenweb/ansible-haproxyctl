@@ -12,7 +12,7 @@ Set up the latest version of [haproxyctl](https://github.com/flores/haproxyctl) 
 
 #### Variables
 
-* `haproxyctl_backup_install_path`: [default: `/usr/local/bin`]: Install directory
+* `haproxyctl_install_path`: [default: `/usr/local/bin`]: Install directory
 
 ## Dependencies
 
