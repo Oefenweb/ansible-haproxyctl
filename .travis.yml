@@ -44,7 +44,7 @@ before_install:
   - sudo apt-get update -qq
 
   # Remove supervisor
-  - sudo apt-get remove --purge haproxyctl || true
+  - sudo apt-get remove --purge --yes haproxyctl || true
 
 install:
   # Install Ansible.
