@@ -29,6 +29,7 @@
   git:
     repo: https://github.com/flores/haproxyctl.git
     dest: "{{ haproxyctl_checkout_path }}"
+    force: true
   register: result
   tags:
     - configuration
