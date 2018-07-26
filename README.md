@@ -1,6 +1,6 @@
 ## haproxyctl
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-haproxyctl.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-haproxyctl) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-haproxyctl-blue.svg)](https://galaxy.ansible.com/list#/roles/6249)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-haproxyctl.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-haproxyctl) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-haproxyctl-blue.svg)](https://galaxy.ansible.com/Oefenweb/haproxyctl)
 
 Set up the latest version of [haproxyctl](https://github.com/flores/haproxyctl) in Debian-like systems.
 
