@@ -1,6 +1,7 @@
 # meta file for haproxyctl
 ---
 galaxy_info:
+  role_name: haproxyctl
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Set up the latest version of haproxyctl in Debian-like systems
