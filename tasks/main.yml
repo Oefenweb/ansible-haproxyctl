@@ -2,11 +2,10 @@
 ---
 - name: install dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ haproxyctl_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  with_items: "{{ haproxyctl_dependencies }}"
   tags:
     - configuration
     - haproxyctl
@@ -30,7 +29,6 @@
     repo: https://github.com/flores/haproxyctl.git
     dest: "{{ haproxyctl_checkout_path }}"
     force: true
-  register: result
   tags:
     - configuration
     - haproxyctl

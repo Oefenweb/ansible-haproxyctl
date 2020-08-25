@@ -1,7 +1,7 @@
 # vars file for haproxyctl
 ---
 haproxyctl_dependencies:
-  - git-core
+  - git
   - ruby
   - lsof
 
