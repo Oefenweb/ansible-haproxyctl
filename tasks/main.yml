@@ -1,4 +1,4 @@
-# tasks file for haproxyctl
+# tasks file
 ---
 - name: install dependencies
   apt:

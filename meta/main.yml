@@ -1,6 +1,7 @@
-# meta file for haproxyctl
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: haproxyctl
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
