@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: install dependencies
-  apt:
+  ansible.builtin.apt:
     name: "{{ haproxyctl_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
@@ -13,7 +13,7 @@
     - haproxyctl-install-dependencies
 
 - name: create (checkout) directory
-  file:
+  ansible.builtin.file:
     path: /var/lib/ansible/haproxyctl/checkouts
     state: directory
     owner: root
@@ -25,7 +25,7 @@
     - haproxyctl-checkout
 
 - name: checkout repository
-  git:
+  ansible.builtin.git:
     repo: https://github.com/flores/haproxyctl.git
     dest: "{{ haproxyctl_checkout_path }}"
     force: true
@@ -35,7 +35,7 @@
     - haproxyctl-checkout
 
 - name: install
-  file:
+  ansible.builtin.file:
     src: "{{ haproxyctl_checkout_path }}/haproxyctl"
     dest: "{{ haproxyctl_install_path }}/haproxyctl"
     state: link
