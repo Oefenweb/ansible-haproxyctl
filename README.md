@@ -3,7 +3,7 @@
 [![CI](https://github.com/Oefenweb/ansible-haproxyctl/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-haproxyctl/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-haproxyctl-blue.svg)](https://galaxy.ansible.com/Oefenweb/haproxyctl)
 
-Set up the latest version of [haproxyctl](https://github.com/flores/haproxyctl) in Debian-like systems.
+Set up the latest version of [haproxyctl](https://github.com/tersmitten/haproxyctl) in Debian-like systems.
 
 #### Requirements
 
